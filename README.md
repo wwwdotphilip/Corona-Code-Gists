@@ -1,7 +1,7 @@
 Corona-Gists
 ============
 
-__This repo containts Gists for Corona SDK.__
+This repo containts Gists for Corona SDK.
 
 __config.lua__ - contains the default cofiguration you should use for your lua project.
 
