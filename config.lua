@@ -11,7 +11,7 @@ if display.pixelHeight > 960 then -- for device with longer height e.g. iPhone 5
             ["@2x"] = 2,           -- For iPhone retina display. Apple requires that all apps support retina display.
         },
     }
-else -- for phones with shorter height e.g. iPhone 4, 3GS, iPad
+else -- for devices with shorter height e.g. iPhone 4, 3GS, iPad, some Android phones.
     application = {
         content = {
             width = 640,
