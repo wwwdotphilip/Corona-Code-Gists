@@ -2,8 +2,9 @@ local function onKeyEvent( event )
     local phase = event.phase -- handles the phase of hardware keys e.g "up", "down"
     local keyName = event.keyName -- handles keyName e.g "back", "search", "menu", "volumeUp", "volumeDown"
     if phase == "up" and keyName == "back" then
-        --Put here what you want to do
-        return true -- OS will not handle this key once return true.
+        -- Put here what you want to do
+        -- such as going back to the previous scene.
+        return true -- OS will not handle this key anymore once you return true.
     else
         return false -- OS will handle the rest of key exept for the back key.
     end
