@@ -1,10 +1,10 @@
 Corona-Gists
 ============
 
-_This repo containts Gists for Corona SDK._
+__This repo containts Gists for Corona SDK.__
 
-_config.lua_ - contains the default cofiguration you should use for your lua project.
+__config.lua__ - contains the default cofiguration you should use for your lua project.
 
-_onKeyEvent.lua_ - contains a sample key handler for Android hardware key.
+__onKeyEvent.lua__ - contains a sample key handler for Android hardware key.
 
-_database.lua_ - a sample external database for your app. I suggesst you place the database in a separate lua file for cleaner project.
+__database.lua__ - a sample external database for your app. I suggesst you place the database in a separate lua file for cleaner project.
