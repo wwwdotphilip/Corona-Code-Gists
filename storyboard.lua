@@ -24,7 +24,7 @@ function scene:exitScene( event )
 end
 
 function scene:destroyScene( event )
-    
+    -- I have not yet found any use of this scene.
 end
 
 scene:addEventListener( "createScene", scene );
