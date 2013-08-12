@@ -1,3 +1,13 @@
+-- Note: When using this for your config.lua make sure when you declare an object ALWAYS use the contentHeight
+-- as reference for the y coordinates.
+-- example:
+-- 
+-- local _W = display.contentWidth
+-- local _H = display.contentHeight
+-- local rect = display.newRect(40, 40, 80, 80)
+-- rect.x = _W / 2; rect.y = _H / 2; -- this will place the rectangle in the middle
+-- no matter what the screen size is.
+
 if display.pixelHeight > 960 then -- for device with longer height e.g. iPhone 5 and most Android Devices.
     application = {
         content = {
