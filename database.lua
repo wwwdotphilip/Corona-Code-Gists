@@ -6,7 +6,6 @@
     local name, age, gender = database.getInfo() -- retrieve all data inside the database table.
     database.setInfo("John", 24, "male"); -- stores new data.
     database.updateInfo("John", 23); -- updates an old data from the database.
-    
 ]]
 
 local db -- sqlite handler.
