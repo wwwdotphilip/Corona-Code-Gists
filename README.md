@@ -11,4 +11,4 @@ __database.lua__ - a sample external database for your app. I suggesst you place
 
 __storyboard.lua__ - you can use this as template if you are using storyboard.
 
-__memory_check.lua__ - check memory usage.
+__memory_check.lua__ - check memory usage. This is a good way to check your apps memory
