@@ -1,5 +1,5 @@
 --[[
-    to call this library simply follow this steps.
+    to call this library simply follow code.
     
     local database = require"database"
     database.opendatabase(); -- For opening the database.
@@ -9,9 +9,9 @@
     
 ]]
 
-local db
-local path
-local M = {}
+local db -- sqlite handler.
+local path -- path where the database file will be created/save/open.
+local M = {} -- This will be our return value.
  
 local infoTable = "inforTable";  -- Declaire string variables. Make sure that your variable name and value are the same.
 local info_name = "info_name";
