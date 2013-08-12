@@ -1,7 +1,7 @@
 -- Note: When using this for your config.lua make sure when you declare an object ALWAYS use the contentHeight
 -- as reference for the y coordinates.
 --
--- example:
+-- example: Place this code inside your main.lua to try.
 -- 
 -- local _W = display.contentWidth
 -- local _H = display.contentHeight
