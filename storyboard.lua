@@ -2,7 +2,6 @@ local storyboard = require"storyboard";
 local scene = storyboard.newScene();
 local screenGroup;
 
-
 function scene:createScene( event )
     screenGroup = self.view;
     -- Declaire all objects inside here
