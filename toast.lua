@@ -2,6 +2,7 @@
 -- To call this library simply follow this line of code.
 -- local toast = require"toast"
 -- toast.new("Hello world", 1000); -- First parameter is the message and the second is the duration in miliseconds.
+-- Credits to PitchBlackCat for the original code. I just made a minor modification.
 
 local M = {}
 
