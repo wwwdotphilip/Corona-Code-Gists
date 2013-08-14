@@ -14,3 +14,5 @@ __storyboard.lua__ - you can use this as template if you are using storyboard.
 __memory_check.lua__ - check memory usage. This is a good way to check your apps memory.
 
 __textfield.lua__ - scale the font size for different device screen size.
+
+__toast.lua__ - a library to display a toast like object from android.
