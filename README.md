@@ -16,3 +16,5 @@ __memory_check.lua__ - check memory usage. This is a good way to check your apps
 __textfield.lua__ - scale the font size for different device screen size.
 
 __toast.lua__ - a library to display a toast like object from android.
+
+__in_app_purchase.lua__ - handles In-App-Purchase.
