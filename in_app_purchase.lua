@@ -1,6 +1,6 @@
 local store = require"store" -- initialize store api.
 
--- You can let this as it is. If you want to see more explaination about his visit the Corona API
+-- If you want to see more explaination about this visit the Corona API
 -- http://docs.coronalabs.com/guide/monetization/IAP/index.html#transaction-listener
 local function transactionCallback( event )
     print("transactionCallback: Received event " .. tostring(event.name))
