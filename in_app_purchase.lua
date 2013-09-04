@@ -1,4 +1,4 @@
--- Make sure that you insert the billing permission if you are publishin on Android.
+-- Make sure that you insert the billing permission if you are publishing on Android.
 -- android = {
 --      usesPermissions = {
 --          "com.android.vending.BILLING",
