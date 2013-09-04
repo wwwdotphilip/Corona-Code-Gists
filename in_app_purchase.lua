@@ -7,6 +7,7 @@
 
 local store = require"store" -- initialize store api.
 
+-- This is the callback that checks the state of the transaction.
 -- If you want to see more explaination about this visit the Corona API
 -- http://docs.coronalabs.com/guide/monetization/IAP/index.html#transaction-listener
 local function transactionCallback( event )
