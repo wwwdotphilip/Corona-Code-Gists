@@ -1,3 +1,10 @@
+-- Make sure that you insert the billing permission if you are publishin on Android.
+-- android = {
+--      usesPermissions = {
+--          "com.android.vending.BILLING",
+--      },
+-- },
+
 local store = require"store" -- initialize store api.
 
 -- If you want to see more explaination about this visit the Corona API
