@@ -6,6 +6,10 @@
 -- },
 
 local store = require"store" -- initialize store api.
+local items = {
+        "eight.app.studio.myappname.myproductname1",
+        "eight.app.studio.myappname.myproductname2"
+    }
 
 -- This is the callback that checks the state of the transaction.
 -- If you want to see more explaination about this visit the Corona API
@@ -45,7 +49,7 @@ end
 -- this handles the purchasing transaction.
 local function purchaseItem()
     -- make sure that your iOS and Google In-App Products has the same product ID
-    store.purchase( {"eight.app.studio.myappname.myproductname"})
+    store.purchase( {item[1]})
 end
 
 -- When a user buys new phone or uninstall your app but reinstalls it later
