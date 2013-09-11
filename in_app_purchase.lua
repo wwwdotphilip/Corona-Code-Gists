@@ -11,6 +11,7 @@ local items = {
         "eight.app.studio.myappname.myproductname2"
     }
 
+
 -- This is the callback that checks the state of the transaction.
 -- If you want to see more explaination about this visit the Corona API
 -- http://docs.coronalabs.com/guide/monetization/IAP/index.html#transaction-listener
