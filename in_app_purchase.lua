@@ -11,7 +11,6 @@ local items = {
         "eight.app.studio.myappname.myproductname2"
     }
 
-
 -- This is the callback that checks the state of the transaction.
 -- If you want to see more explaination about this visit the Corona API
 -- http://docs.coronalabs.com/guide/monetization/IAP/index.html#transaction-listener
@@ -38,14 +37,12 @@ local function transactionCallback( event )
     store.finishTransaction( event.transaction )
 end 
 
-
 -- Identifies the device and will initialize according to type.
 if store.availableStores.apple then
     store.init("apple", transactionCallback)
 elseif store.availableStores.google then
     store.init("google", transactionCallback)
 end
-
 
 -- this handles the purchasing transaction.
 local function purchaseItem()
