@@ -6,7 +6,7 @@ textField = native.newTextField( 40, 80, 560, 80 ) -- declaire native textfield
 local fontSize = 24 -- Value of font size. Change this value if your textfield height is not 80 like I have set.
         
 if( display.contentScaleY < 1 ) then
-    fontSize =  newMoveFont / display.contentScaleY -- Scale the font depending on the screen size.
+    fontSize =  fontSize / display.contentScaleY -- Scale the font depending on the screen size.
 end
 
 textField.font = native.newFont( "Helvetica" ) -- You can change this to any font you like.
