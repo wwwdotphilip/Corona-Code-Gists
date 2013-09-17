@@ -1,4 +1,4 @@
-### Welcome to Corona Code gist.
+### Welcome to Corona Code Gists.
 
 Here are some useful code gists for Corona SDK. You can view the codes individually by clicking on the links from the table of contents below or download the entire repo.
 
