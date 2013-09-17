@@ -1,20 +1,23 @@
-Corona-Gists
-============
+### Welcome to Corona Code gist.
 
-This repo contains code Gists for Corona SDK.
+Here are some useful code gists for Corona SDK. You can view the codes individually by clicking on the links from the table of contents below or download the entire repo.
 
-__config.lua__ - contains the default cofiguration you should use for your lua project.
+### Table of Contents
 
-__onKeyEvent.lua__ - contains a sample key handler for Android hardware key.
+1. [config.lua Template](https://github.com/wwwdotphilip/Corona-Gists/blob/master/config.lua)
 
-__database.lua__ - a sample external database for your app. I suggesst you place the database in a separate lua file for cleaner project.
+2. [Android hardware key handler](https://github.com/wwwdotphilip/Corona-Gists/blob/master/onKeyEvent.lua)
 
-__storyboard.lua__ - you can use this as template if you are using storyboard.
+3. [Template for database library](https://github.com/wwwdotphilip/Corona-Gists/blob/master/database.lua)
 
-__memory_check.lua__ - check memory usage. This is a good way to check your apps memory.
+4. [Template for storyboard](https://github.com/wwwdotphilip/Corona-Gists/blob/master/storyboard.lua)
 
-__textfield.lua__ - scale the font size for different device screen size.
+5. [Code snippet for Memory checking](https://github.com/wwwdotphilip/Corona-Gists/blob/master/memory_check.lua)
 
-__toast.lua__ - a library to display a toast like object from android.
+6. [Native textfield template](https://github.com/wwwdotphilip/Corona-Gists/blob/master/textfield.lua)
 
-__in_app_purchase.lua__ - handles In-App-Purchase.
+7. [Library for displaying toast like object (found on android devices)](https://github.com/wwwdotphilip/Corona-Gists/blob/master/toast.lua)
+
+8. [In App Purchase Template](https://github.com/wwwdotphilip/Corona-Gists/blob/master/in_app_purchase.lua)
+
+9. [Sound template(can be use as external library)](https://github.com/wwwdotphilip/Corona-Gists/blob/master/sound.lua)
