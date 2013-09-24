@@ -3,7 +3,7 @@
 
 textField = native.newTextField( 40, 80, 560, 80 ) -- declaire native textfield
         
-local fontSize = textField.height * .3 -- Value of font size. Change this value if your textfield height is not 80 like I have set.
+local fontSize = textField.height * .3 -- Value of font size.
         
 if( display.contentScaleY < 1 ) then
     fontSize =  fontSize / display.contentScaleY -- Scale the font depending on the screen size.
