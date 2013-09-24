@@ -1,5 +1,5 @@
 -- This code will scale the font size of textfield for different devices.
--- Note: I have only tested this on iPod, iPad and Galaxy S2. So I cannot give a 100% guaranty that this will work.
+-- Note: I have only tested this on iPod, iPad and Galaxy S2. So I cannot give a 100% guaranty that this will work on all devices.
 
 textField = native.newTextField( 40, 80, 560, 80 ) -- declaire native textfield
         
