@@ -31,7 +31,6 @@ params =
 }
 ]]
 function O.positionObject(params)
-<<<<<<< HEAD
     local params=params or {}
     local object=params.object or nil
     local other=params.other or nil
