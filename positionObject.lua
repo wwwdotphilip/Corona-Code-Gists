@@ -28,7 +28,7 @@ function positionObject(params)
 	local params=params or {}
 	local object=params.object or nil
 	local other=params.other or nil
-	local where=params.where or "right"
+	local where=params.where or "default"
 	local otherMargin=params.otherMargin or 0
 	local marginTop=params.marginTop or nil
 	local marginRight=params.marginRight or nil
@@ -54,7 +54,7 @@ function positionObject(params)
 		if where=="top" then
 			object.x=other.x
 			object.y=other.y-objectHeightHalf-otherMargin-objectHeightHalf
-		elseif where=="right" then
+		elseif where=="right" or where=="default" then
 			object.x=other.x+otherWidthHalf+otherMargin+objectWidthHalf
 			object.y=other.y
 		elseif where=="bottom" then
