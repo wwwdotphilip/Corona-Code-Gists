@@ -15,6 +15,7 @@ Example.
 
 local O = {}
 --[[
+params = 
 {
 	object=object,
 	marginTop=number,
@@ -23,6 +24,7 @@ local O = {}
 	marginLeft=number,
 	x=number,
 	y=number,	
+	
 	other=object,
 	where=string, -- top,right,bottom,left
 	otherMargin=number
