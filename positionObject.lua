@@ -1,16 +1,16 @@
 -- Paste this library in your project folder.
 -- To call this library simply follow this line of code.
--- local pos=require("positionObject")
+-- local objPos=require("positionObject")
 --[[
 Corona SDK object positioning
 
 Example.
-    local otherText = display.newText("Other text", 100, 100, nil, 14)
-    local text = display.newText( "Text", 0, 0, nil, 14 )
-    pos.positionObject({object=text,x=display.contentWidth * .5,y=display.contentHeight * .5}) -- positions at the center
-    pos.positionObject({object=text,marginLeft=10,marginTop=10}) -- positions at the top left corner with a left margin and a top margin
-    pos.positionObject({object=text,other=otherText,margin=10}) -- positions at the right(default) of the other object with a margin of 10
-    pos.positionObject({object=text,other=otherText,margin=10,where="bottom"}) -- positions at the bottom of the other object with a margin of 10
+    local otherText=display.newText("Other text",100,100,nil,14)
+    local text=display.newText("Text",0,0,nil,14)
+    objPos.positionObject({object=text,x=display.contentWidth*.5,y=display.contentHeight*.5}) -- positions at the center
+    objPos.positionObject({object=text,marginLeft=10,marginTop=10}) -- positions at the top left corner with a left margin and a top margin
+    objPos.positionObject({object=text,other=otherText,margin=10}) -- positions at the right(default) of the other object with a margin of 10
+    objPos.positionObject({object=text,other=otherText,margin=10,where="bottom"}) -- positions at the bottom of the other object with a margin of 10
 ]]
 
 local O = {}
@@ -57,13 +57,13 @@ function O.positionObject(params)
 	if other and object then
 		if where=="top" then
 			object.x=other.x
-			object.y=other.y-objectHeightHalf-otherMargin-objectHeightHalf
+			object.y=other.y-otherHeightHalf-otherMargin-objectHeightHalf
 		elseif where=="right" or where=="default" then
 			object.x=other.x+otherWidthHalf+otherMargin+objectWidthHalf
 			object.y=other.y
 		elseif where=="bottom" then
 			object.x=other.x
-			object.y=other.y+objectHeightHalf+otherMargin+objectHeightHalf
+			object.y=other.y+otherHeightHalf+otherMargin+objectHeightHalf
 		elseif where=="left" then
 			object.x=other.x-otherWidthHalf-otherMargin-objectWidthHalf
 			object.y=other.y
