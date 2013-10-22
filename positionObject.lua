@@ -1,30 +1,34 @@
+-- Paste this library in your project folder.
+-- To call this library simply follow this line of code.
+-- local pos=require("positionObject")
 --[[
 Corona SDK object positioning
 
 Example.
-    local otherText = display.newText("Hello Me", 100, 100, nil, 14)
-    local text = display.newText( "Hello world", 0, 0, nil, 14 )
-    positionObject({object=text,x=display.contentWidth * .5,y=display.contentHeight * .5}) -- positions at the center
-    positionObject({object=text,marginLeft=10,marginTop=10}) -- positions at the top left corner with a left margin and a top margin
-    positionObject({object=text,other=otherText,margin=10}) -- positions at the right(default) of the other object with a margin of 10
-    positionObject({object=text,other=otherText,margin=10,where="bottom"}) -- positions at the bottom of the other object with a margin of 10
+    local otherText = display.newText("Other text", 100, 100, nil, 14)
+    local text = display.newText( "Text", 0, 0, nil, 14 )
+    pos.positionObject({object=text,x=display.contentWidth * .5,y=display.contentHeight * .5}) -- positions at the center
+    pos.positionObject({object=text,marginLeft=10,marginTop=10}) -- positions at the top left corner with a left margin and a top margin
+    pos.positionObject({object=text,other=otherText,margin=10}) -- positions at the right(default) of the other object with a margin of 10
+    pos.positionObject({object=text,other=otherText,margin=10,where="bottom"}) -- positions at the bottom of the other object with a margin of 10
 ]]
 
+local O = {}
 --[[
 {
 	object=object,
-	other=object,
-	where=string, -- top,right,bottom,left
-	otherMargin=number,	
 	marginTop=number,
 	marginRight=number,
 	marginBottom=number,
 	marginLeft=number,
 	x=number,
-	y=number
+	y=number,	
+	other=object,
+	where=string, -- top,right,bottom,left
+	otherMargin=number
 }
 ]]
-function positionObject(params)
+function O.positionObject(params)
 	local params=params or {}
 	local object=params.object or nil
 	local other=params.other or nil
@@ -100,3 +104,4 @@ function positionObject(params)
 		if yPos then object.y=yPos end
 	end
 end
+return O
