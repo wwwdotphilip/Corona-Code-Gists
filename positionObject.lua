@@ -9,8 +9,8 @@ Example.
     local text=display.newText("Text",0,0,nil,14)
     objPos.positionObject({object=text,x=display.contentWidth*.5,y=display.contentHeight*.5}) -- positions at the center
     objPos.positionObject({object=text,marginLeft=10,marginTop=10}) -- positions at the top left corner with a left margin and a top margin
-    objPos.positionObject({object=text,other=otherText,margin=10}) -- positions at the right(default) of the other object with a margin of 10
-    objPos.positionObject({object=text,other=otherText,margin=10,where="bottom"}) -- positions at the bottom of the other object with a margin of 10
+    objPos.positionObject({object=text,other=otherText,otherMargin=10}) -- positions at the right(default) of the other object with a margin of 10
+    objPos.positionObject({object=text,other=otherText,otherMargin=10,where="bottom"}) -- positions at the bottom of the other object with a margin of 10
 ]]
 
 local O = {}
