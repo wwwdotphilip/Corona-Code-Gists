@@ -16,15 +16,15 @@ output = 12,345,678
 
 local options = {
                 returnVal = "object1",
-                probability = 20,
+                probability = 20,      -- 20% probability
             },
             {
                 returnVal = "object2",
-                probability = 10,
+                probability = 10,      -- 10% probability
             },
             {
                 returnVal = "object3",
-                probability = 15,
+                probability = 15,      -- 15% probability
             },
 }
 print(mathOperation.probabilityCheck(options)
