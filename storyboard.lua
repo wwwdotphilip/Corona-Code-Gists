@@ -15,7 +15,7 @@ function scene:enterScene( event )
 end
 
 function scene:exitScene( event )
-    -- This is where you remove all variables.
+    -- This is where you remove all listeners
     scene:removeEventListener( "createScene", scene );
     scene:removeEventListener( "enterScene", scene );
     scene:removeEventListener( "exitScene", scene );
@@ -23,7 +23,7 @@ function scene:exitScene( event )
 end
 
 function scene:destroyScene( event )
-    -- I have not yet found any use of this scene.
+    -- Remove all declared variables here.
 end
 
 scene:addEventListener( "createScene", scene );
