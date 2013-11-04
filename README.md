@@ -23,3 +23,5 @@ Here are some useful code gists for Corona SDK. You can view the codes individua
 9. [Sound template(can be use as external library)](https://github.com/wwwdotphilip/Corona-Gists/blob/master/sound.lua)
 
 10. [Object positioning(can be use as external library)](https://github.com/wwwdotphilip/Corona-Code-Gists/blob/master/positionObject.lua) 
+
+11. [mathOperations(can be use as external library)](https://github.com/wwwdotphilip/Corona-Code-Gists/blob/master/mathOperation.lua)
