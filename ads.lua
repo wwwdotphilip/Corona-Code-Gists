@@ -67,7 +67,7 @@ local LEFT = 1
 local RIGHT = 3
 
 local tapfortap = require "plugin.tapfortap"
-tapfortap.initialize("8e57b002ff2dfd221b5bcf968f5fe221")
+tapfortap.initialize("tapfortap ID")
 tapfortap.prepareInterstitial() --prepare fullscreen ads
 tapfortap.prepareAppWall()
 
