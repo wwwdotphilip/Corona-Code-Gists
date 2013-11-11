@@ -1,7 +1,9 @@
  --[[
-    --call revmob
+    
     
     local ads = require "ads"
+    
+    --call revmob
     
     --to show revmob ads "banner","fullscreen","show_pop":D
     --to hide "banner_hide" or "fullscreen_hide"
