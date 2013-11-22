@@ -28,8 +28,7 @@ local AMAZON_APK = false
 local _H = display.contentHeight
 local _W = display.contentWidth
 
-local RevMob = require"lib.revmob"
-local RevMob = require("revmob")
+local RevMob = require"revmob"
 local revmob_ANDROID = "APP ID REVMOB"
 local revmob_IOS = "APP ID REVMOB"
 local revmob_AMAZON = "APP ID REVMOB"
