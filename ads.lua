@@ -1,7 +1,9 @@
  --[[
-    --call revmob
+    
     
     local ads = require "ads"
+    
+    --call revmob
     
     --to show revmob ads "banner","fullscreen","show_pop":D
     --to hide "banner_hide" or "fullscreen_hide"
@@ -26,7 +28,8 @@ local AMAZON_APK = false
 local _H = display.contentHeight
 local _W = display.contentWidth
 
-local RevMob = require("luafile.revmob")
+local RevMob = require"lib.revmob"
+local RevMob = require("revmob")
 local revmob_ANDROID = "APP ID REVMOB"
 local revmob_IOS = "APP ID REVMOB"
 local revmob_AMAZON = "APP ID REVMOB"
@@ -44,20 +47,6 @@ fullscreen_revmob:hide()
 local show_pop = RevMob.createPopup()
 show_pop:hide()
 
-function ads.callrevmob (action)
-    if action == "banner" then
-        banner_revmob:show()
-    elseif action == "fullscreen" then
-        fullscreen_revmob:show()
-    elseif action == "banner_hide" then
-        banner_revmob:hide()
-    elseif action == "fullscreen_hide" then
-        fullscreen_revmob:hide()
-    elseif action == "show_pop" then
-        show_pop:show()
-    end
-end
-
 local TOP = 1
 local CENTER = 2
 local BOTTOM = 3
@@ -65,7 +54,7 @@ local LEFT = 1
 local RIGHT = 3
 
 local tapfortap = require "plugin.tapfortap"
-tapfortap.initialize("8e57b002ff2dfd221b5bcf968f5fe221")
+tapfortap.initialize("tapfortap ID")
 tapfortap.prepareInterstitial() --prepare fullscreen ads
 tapfortap.prepareAppWall()
 
@@ -98,20 +87,6 @@ tapfortap.setInterstitialListener(interstitialListener)
 
 --tapfortap.createAdView(verticalAlignment, horizontalAlignment, xOffset, yOffset, scale)
 
-function ads.calltapfortap(action)
-    if action == "banner_bottom" then
-        tapfortap.createAdView(BOTTOM, CENTER, 0, 0, 1)
-    elseif action == "banner_top" then
-        tapfortap.createAdView(TOP,CENTER, 0, 0, 1)
-    elseif action == "fullscreen" then
-        tapfortap.showInterstitial()
-    elseif action == "banner_hide" then
-        tapfortap.removeAdView()
-    elseif action == "more_games" then
-        tapfortap.showAppWall()
-    end
-end
-
 local cbdata = require "ChartboostSDK.chartboostdata"
 local cb = require "ChartboostSDK.chartboost"
 
@@ -124,7 +99,7 @@ local delegate = {
     shouldRequestInterstitial = function(location) print("Chartboost: shouldRequestInterstitial " .. location .. "?"); return true end,
     shouldDisplayInterstitial = function(location) print("Chartboost: shouldDisplayInterstitial " .. location .. "?"); return true end,
     didCacheInterstitial = function(location) print("Chartboost: didCacheInterstitial " .. location); return end,
-    didFailToLoadInterstitial = function(location) print("Chartboost: didFailToLoadInterstitial " .. location); return end,
+    didFailToLoadInterstitial = function(location) ads.calltapfortap("fullscreen")print("Chartboost: didFailToLoadInterstitial " .. location); return end,
     didDismissInterstitial = function(location) print("Chartboost: didDismissInterstitial " .. location); return end,
     didCloseInterstitial = function(location) print("Chartboost: didCloseInterstitial " .. location); return end,
     didClickInterstitial = function(location) print("Chartboost: didClickInterstitial " .. location); return end,
@@ -150,6 +125,34 @@ cb.startSession()
 
 cb.cacheMoreApps() -- load more app's before showing
 cb.cacheInterstitial() -- load fullscreen before showing
+
+function ads.calltapfortap(action)
+    if action == "banner_bottom" then
+        tapfortap.createAdView(BOTTOM, CENTER, 0, 0, 1)
+    elseif action == "banner_top" then
+        tapfortap.createAdView(TOP,CENTER, 0, 0, 1)
+    elseif action == "fullscreen" then
+        tapfortap.showInterstitial()
+    elseif action == "banner_hide" then
+        tapfortap.removeAdView()
+    elseif action == "more_games" then
+        tapfortap.showAppWall()
+    end
+end
+
+function ads.callrevmob (action)
+    if action == "banner" then
+        banner_revmob:show()
+    elseif action == "fullscreen" then
+        fullscreen_revmob:show()
+    elseif action == "banner_hide" then
+        banner_revmob:hide()
+    elseif action == "fullscreen_hide" then
+        fullscreen_revmob:hide()
+    elseif action == "show_pop" then
+        show_pop:show()
+    end
+end
 
 function ads.callchartboost(action)
     if action == "more_games" then

@@ -1,22 +1,54 @@
-local media = require"media";
+--[[
+To use this library simple require this on your lua file and call the functions
 
-local soundSet = {
-    shortSound1 = media.newEventSound("sounds/shortSound1.wav"),
-    shortSound2 = media.newEventSound("sounds/shortSound2.wav"),
-    bgSound = audio.loadStream("sounds/bgSound.wav")
-};
+local sound = require"sound"
+sound.loadSound()
+sound.playSound(1)
+sound.stopSound()
+sound.pauseSound()
+sound.resumeSound()
+]]
 
-local function playShortSound1()
-    media.playEventSound( soundSet["shortSound1"] );
+local M = {}
+M.stopSound = false
+local soundSet
+
+function M.loadSounds()
+    soundSet = {
+        audio.loadStream("sounds/bg.mp3"),
+        audio.loadSound("sounds/button.mp3"),
+        audio.loadSound("sounds/dead.mp3"),
+    };
 end
-timer.performWithDelay(1000, playShortSound1);
 
-local function playShortSound2()
-    media.playEventSound( soundSet["shortSound2"] );
+function M.pauseSound()
+    audio.pause()
 end
-timer.performWithDelay(2000, playShortSound2);
 
-local function playbgSound()
-    audio.play(soundSet["bgSound"]);
+function M.resumeSound()
+    audio.resume()
 end
-timer.performWithDelay(3000, playbgSound);
+
+function M.stopSound()
+    M.stopSound = true;
+    audio.stop()
+    for i = 1, #soundSet do
+        audio.dispose( soundSet[i] )
+        soundSet[i] = nil
+    end
+    soundSet = nil
+end
+
+function M.playSound(soundIndex)
+    if soundIndex == 1 then
+        if M.stopSound then
+            M.stopSound = false
+        else
+            audio.play(soundSet[soundIndex], {onComplete = function()M.playSound(soundIndex)end}) -- replay the sound after it finished playing.
+        end
+    else
+        audio.play(soundSet[soundIndex])
+    end
+end
+
+return M
