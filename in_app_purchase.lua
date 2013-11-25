@@ -47,7 +47,7 @@ end
 -- this handles the purchasing transaction.
 local function purchaseItem()
     -- make sure that your iOS and Google In-App Products has the same product ID
-    store.purchase( {item[1]})
+    store.purchase( {items[1]})
 end
 
 -- When a user buys new phone or uninstall your app but reinstalls it later

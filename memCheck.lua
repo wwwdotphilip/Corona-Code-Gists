@@ -1,3 +1,10 @@
+--[[
+    local mem = require"memCheck"
+    mem.checkMem(3000) -- displays memory consumption every 3 seconds.
+]]
+
+local M = {}
+
 local function checkmem()
     collectgarbage()
     print( "MemUsage: " .. string.format("%.03f",collectgarbage("count")) .. " KB" ) -- print in KB
@@ -6,5 +13,8 @@ local function checkmem()
     print( "TexMem:   " .. string.format("%.03f", textMem) .. " MB" ) -- print in MB
 end
 
-timer.performWithDelay(3000, checkmem, 0) -- call function every 3 seconds.
-                                          -- you can change the interval if you want.
+function M.checkMem(dTime)
+    timer.performWithDelay(dTime, checkmem, 0)
+end
+
+return M
