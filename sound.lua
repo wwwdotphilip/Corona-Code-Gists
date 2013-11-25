@@ -1,5 +1,5 @@
 --[[
-To use this library simple require this on your lua file and call the functions
+To use this library simply require this in your lua file and call the functions
 
 local sound = require"sound"
 sound.loadSound()
