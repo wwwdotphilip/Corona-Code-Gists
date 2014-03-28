@@ -17,6 +17,7 @@ local tab = {} -- use for tab widget.
 local swt = {} -- use for switch widget.
 local tmr = {} -- use for timers.
 local tran = {} -- use for transitions.
+local func = {} -- use for functions.
 
 function scene:createScene( event )
     screenGroup = self.view;
@@ -54,6 +55,7 @@ function scene:destroyScene( event )
     swt = nil
     tmr = nil
     tran = nil
+    func = nil
 end
 
 function scene:overlayBegan( event )
